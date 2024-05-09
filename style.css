@@ -1,0 +1,171 @@
+* {
+    margin: 0;
+    font-family: 'poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+.header {
+    display: fixed;
+    position: absolute;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(#2b1055, #7597de);
+    overflow-x: hidden;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 100px;
+}
+
+.logo {
+    color: #fff;
+    text-decoration: none;
+    width: fit-content;
+    margin-top: 10px;
+    font-weight: 700;
+    font-size: 28px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    z-index: 10000;
+}
+
+.row .nav {
+    display: flex;
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: 900;
+    z-index: 11;
+}
+
+.header .row .nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header .row .nav li {
+    padding: 10px;
+}
+
+.header .row .nav a {
+    color: #fff;
+    text-decoration: none;
+    border: 2px;
+    border-radius: 20px;
+    padding: 10px;
+    transition: 0.5s;
+}
+
+.header .row .nav a:hover,
+.header .row .nav a.active {
+    background-color: #fff;
+    color: #2b1055;
+    transition: 0.5s;
+}
+
+.images {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 158px;
+    width: 100%;
+    height: 100vh;
+}
+.images::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to top,#1c0522,transparent);
+    z-index: 1000;
+}
+
+.images img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none; /* Ensure the image doesn't capture pointer events */
+}
+
+#moon {
+    mix-blend-mode: screen;
+    opacity: 0.7;
+    transition: 0.5s;
+    z-index: 5; /* Ensure moon image is above other elements */
+    pointer-events: auto; /* Allow mouse interactions on the moon image */
+    width: auto;
+}
+
+#moon:hover {
+    opacity: 1;
+    transition: 0.5s;
+}
+
+#front {
+    z-index: 10; /* Set a z-index to ensure it's above other elements */
+}
+#behind{
+    z-index: 5;
+}
+
+.text {
+    transform: translateY(-100px);
+    right: -350px;
+    position: absolute;
+    display: flex;
+    white-space: nowrap;
+    color: #fff;
+    font-size: 5.8vw; /* Adjust the font size as needed */
+    font-weight: bold; /* Adjust the font weight as needed */
+    letter-spacing: -1.1px;
+    z-index: 9; /* Set a lower z-index value */
+}
+
+.btn-container {
+    top: 430px;
+    position: absolute; /* Add position relative */
+    z-index: 5;
+    
+}
+
+.btn {
+    margin-left: 5px;
+    text-decoration: none;
+    border: 2px;
+    border-radius: 40px;
+    padding: 12px 24px;
+    background-color: #fff;
+    color: #2b1055;
+    transition: 1s;
+}
+.btn:hover{
+    margin-right: 28px;
+    transition: 1s;
+}
+
+.essay{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 100px;
+    background-color: #1c0522;
+    color: #fff;
+    z-index: 1000;
+}
+.essay h2{
+    font-size: 3.5em;
+    margin-bottom: 10px;
+}
+.essay p{
+    font-size: 1em;
+}
+
