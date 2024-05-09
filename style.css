@@ -103,7 +103,7 @@
     transition: 0.5s;
     z-index: 5; /* Ensure moon image is above other elements */
     pointer-events: auto; /* Allow mouse interactions on the moon image */
-    width: 16px;
+    width: auto;
 }
 
 #moon:hover {
